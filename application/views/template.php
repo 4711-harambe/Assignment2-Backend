@@ -23,9 +23,6 @@
 
 	</head>
 	<body>
-    <!-- Loads the navbar -->
-		{menubar}
-
 		<!-- loads banner image-->
 		{header}
 

@@ -4,9 +4,7 @@
     class Homepage extends Application
     {
         public function __construct() {
-	parent::__construct();
-            $this->load->model('LogModel');
-
+            parent::__construct();
 	}
         
 
@@ -29,14 +27,6 @@
         {
             $this->data['pagebody'] = 'homepage_view';
             $this->data['pagetitle'] = 'Homepage';
-            
-            $moneySpent = $this->LogModel->RetrieveMoneySpentPurchasing();
-            $moneyEarned = $this->LogModel->RetrieveMoneyEarnedSales();
-            $costOfConsumed = $this->LogModel->RetrieveCostofConsumed();
-            
-            $this->data['moneySpent'] = $moneySpent;
-            $this->data['moneyEarned'] = $moneyEarned;
-            $this->data['consumedCost'] = $costOfConsumed;
 
             $this->render();
         }

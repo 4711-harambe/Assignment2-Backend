@@ -57,7 +57,8 @@ INSERT INTO `supplies` (`id`, `code`, `description`, `receivingUnit`, `receiving
 (13, 'candles', 'Fancy-smelling candles.', 'single', 5, 'single', 30),
 (14, 'wine', 'Run of the mill Riesling.', 'bottle', 15, '750ml bottle', 28),
 (15, 'febreeze', 'Cleaning supplies for lazy people.', 'bottle', 5, 'bottle', 4),
-(16, 'garbage bag', 'hefty x-large black garbage bags.', 'bag', 4, 'bag', 21);
+(16, 'garbage bag', 'hefty x-large black garbage bags.', 'bag', 4, 'bag', 21),
+(17, 'condoms', 'Box of premium condoms.', 'box', 15, 'box', 2);;
 
 -- --------------------------------------------------------
 

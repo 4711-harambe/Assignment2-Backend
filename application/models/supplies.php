@@ -1,6 +1,6 @@
 <?php
 
-class SuppliesModel extends MY_Model {
+class supplies extends MY_Model {
 
     function __construct() {
         parent::__construct();

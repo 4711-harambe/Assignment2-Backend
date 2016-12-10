@@ -1,11 +1,11 @@
 <?php
 require APPPATH . '/third_party/restful/libraries/Rest_controller.php';
 
-class SuppliesController extends Rest_Controller {
+class maintenance extends Rest_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('SuppliesModel');
+        $this->load->model('supplies');
     }
 
     function index_get() {
@@ -21,11 +21,11 @@ class SuppliesController extends Rest_Controller {
 
     private function crud_get($key = null) {
         if (!$key) {
-            $this->response($this->SuppliesModel->all(), 200);
+            $this->response($this->supplies->all(), 200);
             return;
         }
 
-        $result = $this->SuppliesModel->get($key);
+        $result = $this->supplies->get($key);
         if ($result != null)
             $this->response($result, 200);
         else
@@ -55,12 +55,12 @@ class SuppliesController extends Rest_Controller {
             return;
         }
 
-        if ($this->SuppliesModel->exists($key)) {
+        if ($this->supplies->exists($key)) {
             $this->response(array('error' => 'Create: Supply ' . $key . ' already exists'), 406);
             return;
         }
 
-        $this->SuppliesModel->add($record);
+        $this->supplies->add($record);
 
         $oops = $this->db->error();
         if (empty($oops['code']))
@@ -94,12 +94,12 @@ class SuppliesController extends Rest_Controller {
             return;
         }
 
-        if (!$this->SuppliesModel->exists($key)) {
+        if (!$this->supplies->exists($key)) {
             $this->response(array('error' => 'Update: Supply ' . $key . ' not found'), 406);
             return;
         }
 
-        $this->SuppliesModel->update($record);
+        $this->supplies->update($record);
 
         $oops = $this->db->error();
         if (empty($oops['code']))
@@ -126,12 +126,12 @@ class SuppliesController extends Rest_Controller {
             return;
         }
 
-        if (!$this->SuppliesModel->exists($key)) {
+        if (!$this->supplies->exists($key)) {
             $this->response(array('error' => 'Delete: Supply ' . $key . ' not found'), 406);
             return;
         }
 
-        $this->SuppliesModel->delete($key);
+        $this->supplies->delete($key);
         $this->response(array('error' => $this->db->error(),
             'test' => 'testing'), 500);
         return;
@@ -144,10 +144,10 @@ class SuppliesController extends Rest_Controller {
     }
 
     function rules_get() {
-        $this->response($this->SuppliesModel->rules(), 200);
+        $this->response($this->supplies->rules(), 200);
     }
 
     function create_get() {
-        return $this->response($this->SuppliesModel->create(), 200);
+        return $this->response($this->supplies->create(), 200);
     }
 }

@@ -7,18 +7,20 @@ class maintenance extends Rest_Controller {
         parent::__construct();
         $this->load->model('supplies');
     }
-
+    
+    //Return all or one supply item.
     function index_get() {
         $key = $this->get('id');
         $this->crud_get($key);
     }
-
+    
+    //Returns one supply item using /maintenance/item/id/{id}
     function item_get($key = null) {
         if (($key == null) || ($key == 'id'))
             $key = $this->get('id');
         $this->crud_get($key);
     }
-
+    
     private function crud_get($key = null) {
         if (!$key) {
             $this->response($this->supplies->all(), 200);
@@ -31,11 +33,13 @@ class maintenance extends Rest_Controller {
         else
             $this->response(array('error' => 'Read: Supply item ' . $key . ' not found!'), 404);
     }
-
+    
+    //POST with a payload. If the item id is in the payload POST to /maintenance.
     function index_post() {
         $this->crud_post($this->post());
     }
-
+    
+    //POST with item id as part of URI: /maintenance/item/id/{id}
     function item_post($key = null) {
         $record = json_decode($this->post(), true);
 
@@ -68,7 +72,8 @@ class maintenance extends Rest_Controller {
         else
             $this->response($oops, 400);
     }
-
+    
+    // PUT to "/maintenance" with the id passed in the payload, or a PUT to "/maintenance?id=123"
     function index_put() {
         $this->crud_put($this->post());
     }
@@ -107,7 +112,8 @@ class maintenance extends Rest_Controller {
         else
             $this->response($oops, 400);
     }
-
+    
+    //DELETE using /maintenance/item/id/{id}
     function index_delete() {
         $this->crud_delete($this->delete());
     }

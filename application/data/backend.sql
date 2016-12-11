@@ -58,7 +58,7 @@ INSERT INTO `supplies` (`id`, `code`, `description`, `receivingUnit`, `receiving
 (14, 'Wine', 'Run of the mill Riesling.', 'bottle', 15, '750ml bottle', 28),
 (15, 'Febreeze', 'Cleaning supplies for lazy people.', 'bottle', 5, 'bottle', 4),
 (16, 'Garbage Bag', 'hefty x-large black garbage bags.', 'bag', 4, 'bag', 21),
-(17, 'Condoms', 'Box of premium condoms.', 'box', 15, 'box', 2);;
+(17, 'Condoms', 'Box of premium condoms.', 'box', 15, 'box', 2);
 
 -- --------------------------------------------------------
 

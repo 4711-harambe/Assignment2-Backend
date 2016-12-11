@@ -42,23 +42,23 @@ CREATE TABLE `supplies` (
 --
 
 INSERT INTO `supplies` (`id`, `code`, `description`, `receivingUnit`, `receivingCost`, `stockingUnit`, `quantityOnHand`) VALUES
-(1, 'pizza slice', 'Slice of pepperoni pizza.', 'slice', 2, 'slice', 0),
-(2, 'kraft dinner', 'Macaroni and cheese.', 'box', 1.5, 'box', 10),
-(3, 'mountain dew', 'Nectar of the nerds.', 'bottle', 2.5, '1L bottle', 13),
-(4, 'steak', 'Just the beef.', 'single', 8, 'single', 20),
-(5, 'baked potatoe', 'Russet potatoe.', 'single', 0.5, 'single', 25),
-(6, 'asparagus spear', 'Fresh non-organic asparagus.', 'spear', 3, 'spear', 30),
-(7, 'beer', 'Local craft beer.', 'bottle', 8, '22oz bottle', 25),
-(8, 'deck of cards', 'Simple and cheap fun.', 'deck', 1, 'deck', 15),
-(9, 'poker chips', 'Casino chip set', 'set', 50, 'set', 0),
-(10, 'cigars', 'Premium Cuban cigars', 'single', 15, 'single', 40),
-(11, 'chips', 'Good old fashioned salt and vinegar.', 'bag', 3.5, 'bag', 20),
-(12, 'Netflix subscription', 'The be-all end-all of streaming media.', 'subscription', 9.99, 'subscription', 9999),
-(13, 'candles', 'Fancy-smelling candles.', 'single', 5, 'single', 30),
-(14, 'wine', 'Run of the mill Riesling.', 'bottle', 15, '750ml bottle', 28),
-(15, 'febreeze', 'Cleaning supplies for lazy people.', 'bottle', 5, 'bottle', 4),
-(16, 'garbage bag', 'hefty x-large black garbage bags.', 'bag', 4, 'bag', 21),
-(17, 'condoms', 'Box of premium condoms.', 'box', 15, 'box', 2);;
+(1, 'Pizza Slice', 'Slice of pepperoni pizza.', 'slice', 2, 'slice', 0),
+(2, 'Kraft Dinner', 'Macaroni and cheese.', 'box', 1.5, 'box', 10),
+(3, 'Mountain Dew', 'Nectar of the nerds.', 'bottle', 2.5, '1L bottle', 13),
+(4, 'Steak', 'Just the beef.', 'single', 8, 'single', 20),
+(5, 'Baked Potato', 'Russet potato.', 'single', 0.5, 'single', 25),
+(6, 'Asparagus Spear', 'Fresh non-organic asparagus.', 'spear', 3, 'spear', 30),
+(7, 'Beer', 'Local craft beer.', 'bottle', 8, '22oz bottle', 25),
+(8, 'Deck of Cards', 'Simple and cheap fun.', 'deck', 1, 'deck', 15),
+(9, 'Poker Chips', 'Casino chip set', 'set', 50, 'set', 0),
+(10, 'Cigars', 'Premium Cuban cigars', 'single', 15, 'single', 40),
+(11, 'Chips', 'Good old fashioned salt and vinegar.', 'bag', 3.5, 'bag', 20),
+(12, 'Netflix Subscription', 'The be-all end-all of streaming media.', 'subscription', 9.99, 'subscription', 9999),
+(13, 'Candles', 'Fancy-smelling candles.', 'single', 5, 'single', 30),
+(14, 'Wine', 'Run of the mill Riesling.', 'bottle', 15, '750ml bottle', 28),
+(15, 'Febreeze', 'Cleaning supplies for lazy people.', 'bottle', 5, 'bottle', 4),
+(16, 'Garbage Bag', 'hefty x-large black garbage bags.', 'bag', 4, 'bag', 21),
+(17, 'Condoms', 'Box of premium condoms.', 'box', 15, 'box', 2);;
 
 -- --------------------------------------------------------
 

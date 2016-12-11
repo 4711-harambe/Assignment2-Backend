@@ -83,6 +83,8 @@ class maintenance extends Rest_Controller {
 
         $record = json_decode($incoming, true);
 
+        $record['description'] = str_replace('_', ' ', $record['description']);
+
         if (($key == null) || ($key == 'id')) {
             $key = $this->get('id');
             $record = array_merge(array('id' => $key), $record);
